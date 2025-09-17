@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vikas Kumar - Full Stack Developer specializing in modern web applications. Expert in React, Node.js, and Python.">
+    <meta name="keywords" content="Vikas Kumar, web developer, full stack, react, node.js, python, javascript, portfolio">
+    <meta name="author" content="Vikas Kumar">
+    <title>Vikas Kumar - Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Vikas Kumar</a>
+            <ul class="nav-links">
+                <li><a href="#about" aria-label="About me">About</a></li>
+                <li><a href="#projects" aria-label="View my projects">Projects</a></li>
+                <li><a href="#skills" aria-label="My technical skills">Skills</a></li>
+                <li><a href="contact.html" aria-label="Contact me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm Vikas Kumar</h1>
+                    <p>Full Stack Developer crafting exceptional digital experiences with modern technologies</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>
+                        I'm a passionate full-stack developer with over 3 years of experience building scalable web applications. 
+                        I specialize in creating seamless user experiences with modern technologies like React, Node.js, and Python.
+                    </p>
+                    <p>
+                        My journey in tech started with a curiosity about how things work behind the scenes, and it has evolved into 
+                        a career focused on solving complex problems and delivering high-quality software solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <p>Here are some of my recent projects that showcase my skills and experience</p>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and real-time inventory management.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Task Management App</h3>
+                        <p>A collaborative task management application with real-time updates, team workspaces, and advanced filtering capabilities built with Next.js and Firebase.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Firebase</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Weather Dashboard</h3>
+                        <p>A responsive weather application featuring location-based forecasts, interactive maps, and personalized weather alerts using OpenWeatherMap API.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>API Integration</span>
+                            <span>Chart.js</span>
+                            <span>CSS Grid</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <p>Technologies and tools I work with to build modern applications</p>
+                <div class="skills-list">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>MongoDB</span>
+                    <span>PostgreSQL</span>
+                    <span>Git</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>Tailwind CSS</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vikas Kumar. Built with passion and modern technologies. | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic hero background images - using placeholder service for reliable loading
+        const heroImages = [
+            'https://picsum.photos/1920/1080?random=1',
+            'https://picsum.photos/1920/1080?random=2',
+            'https://picsum.photos/1920/1080?random=3',
+            'https://picsum.photos/1920/1080?random=4',
+            'https://picsum.photos/1920/1080?random=5'
+        ];
+
+        const hero = document.querySelector('.hero');
+        let currentImageIndex = 0;
+
+        // Preload images for smooth transitions
+        function preloadImages() {
+            heroImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        // Change background image
+        function changeHeroBackground(index) {
+            if (hero) {
+                hero.style.backgroundImage = `url(${heroImages[index]})`;
+            }
+        }
+
+        // Cycle through images
+        function cycleImages() {
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            changeHeroBackground(currentImageIndex);
+        }
+
+        // Initialize hero background
+        function initHeroBackground() {
+            preloadImages();
+            changeHeroBackground(0);
+            
+            // Change image every 5 seconds
+            setInterval(cycleImages, 5000);
+        }
+
+        // Smooth scroll behavior and header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            initHeroBackground();
+        });
+    </script>
+</body>
+</html>
