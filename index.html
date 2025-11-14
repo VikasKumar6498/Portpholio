@@ -11,15 +11,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="danger.css">
+    <link rel="stylesheet" href="cursor-effect.css">
+    <script src="animation.js" defer></script>
+    <script src="projects-skills-animation.js" defer></script>
+    <script src="danger-effect.js" defer></script>
+    <script src="cursor-effect.js" defer></script>
 </head>
 <body>
+    <div class="animated-bg"></div>
     <header>
         <nav class="container">
             <a href="#" class="logo">Vikas Kumar</a>
             <ul class="nav-links">
                 <li><a href="#about" aria-label="About me">About</a></li>
+                <li><a href="#education" aria-label="My education">Education</a></li>
+                <li><a href="#experience" aria-label="My experience">Experience</a></li>
                 <li><a href="#projects" aria-label="View my projects">Projects</a></li>
                 <li><a href="#skills" aria-label="My technical skills">Skills</a></li>
+                <li><a href="#certifications" aria-label="My certifications">Certifications</a></li>
                 <li><a href="contact.html" aria-label="Contact me">Contact</a></li>
             </ul>
         </nav>
@@ -63,34 +73,19 @@
                     <div class="project-card">
                         <h3>E-Commerce Platform</h3>
                         <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and real-time inventory management.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Stripe</span>
-                        </div>
+                       
                         <a href="#" class="btn btn-secondary">View Project</a>
                     </div>
                     <div class="project-card">
                         <h3>Task Management App</h3>
                         <p>A collaborative task management application with real-time updates, team workspaces, and advanced filtering capabilities built with Next.js and Firebase.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Firebase</span>
-                            <span>TypeScript</span>
-                            <span>Tailwind</span>
-                        </div>
+                        
                         <a href="#" class="btn btn-secondary">View Project</a>
                     </div>
                     <div class="project-card">
                         <h3>Weather Dashboard</h3>
                         <p>A responsive weather application featuring location-based forecasts, interactive maps, and personalized weather alerts using OpenWeatherMap API.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>API Integration</span>
-                            <span>Chart.js</span>
-                            <span>CSS Grid</span>
-                        </div>
+                        
                         <a href="#" class="btn btn-secondary">View Project</a>
                     </div>
                 </div>
@@ -102,20 +97,142 @@
                 <h2>Technical Skills</h2>
                 <p>Technologies and tools I work with to build modern applications</p>
                 <div class="skills-list">
-                    <span>JavaScript</span>
-                    <span>TypeScript</span>
-                    <span>React</span>
-                    <span>Next.js</span>
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>Python</span>
-                    <span>Django</span>
-                    <span>MongoDB</span>
-                    <span>PostgreSQL</span>
-                    <span>Git</span>
-                    <span>Docker</span>
-                    <span>AWS</span>
-                    <span>Tailwind CSS</span>
+                    <span data-category="frontend">JavaScript</span>
+                    <span data-category="frontend">TypeScript</span>
+                    <span data-category="frontend">React</span>
+                    <span data-category="frontend">Next.js</span>
+                    <span data-category="backend">Node.js</span>
+                    <span data-category="backend">Express</span>
+                    <span data-category="backend">Python</span>
+                    <span data-category="backend">Django</span>
+                    <span data-category="database">MongoDB</span>
+                    <span data-category="database">PostgreSQL</span>
+                    <span data-category="devops">Git</span>
+                    <span data-category="devops">Docker</span>
+                    <span data-category="devops">AWS</span>
+                    <span data-category="frontend">Tailwind CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-date">2020 - 2024</div>
+                        <div class="education-content">
+                            <h3>Bachelor of Technology in Computer Science</h3>
+                            <h4>Indian Institute of Technology, Delhi</h4>
+                            <p>GPA: 8.5/10 • Relevant Coursework: Data Structures, Algorithms, Web Development, Machine Learning</p>
+                            <div class="education-achievements">
+                                <span>Dean's List</span>
+                                <span>Technical Club President</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-date">2018 - 2020</div>
+                        <div class="education-content">
+                            <h3>Senior Secondary Education</h3>
+                            <h4>Delhi Public School, R.K. Puram</h4>
+                            <p>PCM with Computer Science • Percentage: 95.2%</p>
+                            <div class="education-achievements">
+                                <span>School Topper</span>
+                                <span>Math Olympiad Winner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-date">Jan 2023 - Present</div>
+                        <div class="experience-content">
+                            <h3>Senior Full Stack Developer</h3>
+                            <h4>TechCorp Solutions</h4>
+                            <ul>
+                                <li>Led development of microservices architecture serving 1M+ users</li>
+                                <li>Improved application performance by 40% through optimization techniques</li>
+                                <li>Mentored junior developers and conducted code reviews</li>
+                                <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>AWS</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-date">Jun 2022 - Dec 2022</div>
+                        <div class="experience-content">
+                            <h3>Full Stack Developer Intern</h3>
+                            <h4>StartupXYZ</h4>
+                            <ul>
+                                <li>Developed responsive web applications using React and Node.js</li>
+                                <li>Integrated third-party APIs and payment gateways</li>
+                                <li>Collaborated with design team to implement UI/UX improvements</li>
+                                <li>Reduced page load time by 30% through optimization</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span>React</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                                <span>Stripe API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2>Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <div class="certification-icon">🏆</div>
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <p>Amazon Web Services</p>
+                        <span class="certification-date">2023</span>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">📊</div>
+                        <h3>Google Data Analytics Certificate</h3>
+                        <p>Google</p>
+                        <span class="certification-date">2022</span>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">🚀</div>
+                        <h3>Meta Front-End Developer Certificate</h3>
+                        <p>Meta (Facebook)</p>
+                        <span class="certification-date">2022</span>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">🔒</div>
+                        <h3>CompTIA Security+</h3>
+                        <p>CompTIA</p>
+                        <span class="certification-date">2021</span>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">🔒</div>
+                        <h3>CompTIA Security+</h3>
+                        <p>CompTIA</p>
+                        <span class="certification-date">2021</span>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">🔒</div>
+                        <h3>CompTIA Security+</h3>
+                        <p>CompTIA</p>
+                        <span class="certification-date">2021</span>
+                    </div>
                 </div>
             </div>
         </section>
